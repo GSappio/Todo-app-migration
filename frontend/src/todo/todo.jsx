@@ -53,7 +53,7 @@ export default class Todo extends Component {
         axios.put(`${URL}/${todo._id}`, {...todo, done:true})
             .then(resp=>(this.refresh(this.state.description)))
     }
-
+    
     handleMaskAsPending(todo){
         axios.put(`${URL}/${todo._id}`, {...todo, done:false})
             .then(resp=>(this.refresh(this.state.description)))
